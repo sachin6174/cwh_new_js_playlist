@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ch 7ps</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            color:rgb(28, 34, 152)
+        }
+        html,body{
+            height: 100%;
+            width: 100%;
+            
+        }
+        nav{
+            display: flex;
+            background-color: rgb(0, 0, 5);
+        }
+        nav li{
+            list-style: none;
+            padding: 0px 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <li>Home</li>
+        <li>Contact</li>
+        <li>About</li>
+    </nav>
+
+    <!-- ex3
+        if we check in console (inspect) then <tbody> is inserted it self // this is actually reendered
+        if we do view page sourse then <tbody> will not be displayed // it is developers code
+     -->
+    <table>
+        <tr> <td>1</td> <td>1</td> <td>1</td> </tr>
+        <tr> <td>2</td> <td>2</td> <td>2</td> </tr>
+    </table>
+
+    <script src="38_sol_7ch.js"></script>
+</body>
+</html>

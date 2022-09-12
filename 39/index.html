@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/joystick.png">
+    <style>
+        .hori{
+            padding: 50px;
+            display: flex;
+            align-items:center;
+        }
+        .s{
+            font-size: 50px;
+            height: 100px;
+            width: 200px;
+            margin: 20px;
+        }
+    </style>
+
+    <title>Game</title>
+</head>
+<body>
+    <h1>Select Game type</h1>
+    <div class="hori">
+        <button class="s" >Stone</button>
+        <button class="s" >Snake</button>
+    </div>
+    <div >
+        <input type="text" id="val">
+        <input type="submit" id ="btn">
+    </div>
+
+
+
+    <script>
+        element= document.getElementById("btn")
+        element.addEventListener("click", myFunction);
+        function myFunction() {
+            //1->snake 2->w 3->g
+            let num=Math.ceil(Math.random()*3);
+            console.log(document.getElementById("val"). value)
+            if(document.getElementById("val").value==num){
+                console.log("Draw")
+            }else if(document.getElementById("val").value=='s' && num==2 ){
+                console.log(`you chosed s machine chosed ${num} `)
+            }
+        }
+        element= document.getElementById("btn")
+
+    </script>
+</body>
+</html>
