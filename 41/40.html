@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>some propertie</title>
+</head>
+<body>
+    hello word
+    <span id="span1"><strong>span1</strong></span>
+
+    <div id="dhappa">gayab ho</div>
+    <script>
+        // console.dir ,console.log 
+        //tagname (only exist for element node ) ,nodename (defined for any node (eg text comment etc))
+
+    // inner html
+    // outer html 
+    // span ->the length of something from one end to the other
+        console.log(document.getElementsByTagName('span')[0])
+        // it logs the element in html form 
+        console.dir(document.getElementsByTagName('span')[0])
+        // it logs the element in object form
+
+        console.log(document.firstChild.nodeName)
+        // it will text (refering to hello word) as that is first node
+
+        console.log(document.firstElementChild.nodeType)
+        // it will give span as span is the  first  element 
+        console.log(span1.innerHTML)
+        // we can get and set the inner html
+        // inner html is valid for element node only
+        // we can directly print id.innerHTML // but it is bad prcctice
+        // correct way is console.log(document.getElementById('span1').innerHTML)
+
+
+        console.log(span1.outerHTML)
+        // it print current element and all element nested in it
+        // this is also valid for element node 
+
+
+        // to fetch data of comment node and text node use data or nodeValue  or textContent property
+        console.log(document.body.firstChild.nodeValue)
+        // or
+        console.log(document.body.firstChild.data)
+        //or
+        console.log(document.body.textContent)
+        // it will print complete site text content very useful
+
+
+        //hidden proprty
+        dhappa.hidden=true;
+
+
+        
+
+    </script>
+</body>
+</html>
