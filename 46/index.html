@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+
+            background-color: rgb(87, 199, 64);   
+        }
+        #inc{
+            display: flex;
+            background-color: aqua;   
+            height: 300px;    
+            justify-content: center;
+            /* width: 200px;   */
+            
+        }
+        .fitem{
+            align-items: center; 
+            background-color: rgb(112, 39, 155);   
+            height: 200px;    
+            width: 200px;  
+            font-size: 100px;
+            margin: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="inc">
+        <div class="fitem">
+            1
+        </div>
+
+    </div>
+
+
+    <script >
+        let item= document.getElementsByClassName('fitem')
+
+        let intervalid1=setInterval(()=>{
+            item[0].innerHTML=Number(item[0].innerHTML)+1;
+            
+        },50)
+
+        let timeoutid1=setTimeout(()=>{
+            clearInterval(intervalid1);
+        },50000)
+
+        // clearTimeout(timeoutid1);
+
+
+    </script>
+</body>
+</html>

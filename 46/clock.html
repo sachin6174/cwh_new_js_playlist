@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>time</title>
+    <style>
+
+        body{
+            background-color: rgb(204, 54, 154);   
+        }
+        #inc{
+            display: flex;
+            background-color: rgb(27, 10, 121);   
+            height: 300px; 
+            justify-content: center;   
+        }
+
+        .fitem{
+            align-items: center; 
+            background-color: rgb(112, 39, 155);   
+            height: 200px;    
+            width: 600px;  
+            font-size: 50px;
+            margin: 10px;       
+        }
+        #type{
+            margin: 20px;
+            background-color: bisque;
+            height: 300px;
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div id="inc">
+        <div class="fitem">
+            
+        </div>
+        <div class="fitem">
+            
+        </div>
+    </div>
+    <div id="type">
+
+    </div>
+
+    <script >
+
+        let intro=`HELLO THERE !
+I'M Sachin Kumar
+I Am Pursuing My Studies In B-Tech Computer Science And Engineering From Chandigarh Group Of Colleges Landran.
+
+I Like Philosophy,Literature, Mathematics And Physics. I Like To Listen To Music To Recreate Myself. Apart From My Hobbies, I Am A Good Listener ,Adaptive And Friendly And Like To Work In A Team.
+
+And About My Technical Skills, I Am Comfortable With Several Languages Like C/C++, Python, Javascript, And Databases Such As SQL, MongoDB And Redis.
+
+Apart Of These, I Like To Learn About High-Level System Design, Dev Ops , Machine Learning, And Cloud Computing .`
+
+        let item= document.getElementsByClassName('fitem')
+
+        let intervalid1=setInterval(()=>{
+            const date = new Date();
+            const now = Date.now();
+            item[0].innerHTML=`Normal:${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+            item[1].innerHTML=`Epoch: ${now}`;
+
+        },1)
+        
+        let type=document.getElementById('type')
+        let i=0;
+        let intervalid2=setInterval(()=>{
+            type.innerHTML+= intro[i];
+            i++;
+            if(i==intro.length){
+                clearInterval(intervalid2);
+            }
+        },30)
+
+    </script>
+</body>
+</html>
